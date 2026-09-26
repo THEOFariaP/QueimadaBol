@@ -2,7 +2,7 @@ export type ClassId = 'padrao' | 'tanque' | 'dps' | 'suporte'
 export type Phase = 'lobby' | 'playing' | 'shop'
 
 export const RULES = {
-  roundMs: 1 * 60 * 1000,
+  roundMs: 15 * 60 * 1000,
   killXp: 30,
   xpBountyFactor: 0.15,
   poisonTickMs: 3000,
