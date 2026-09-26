@@ -192,7 +192,7 @@ export function applyAction(s: GameState, actorId: string, action: Action): stri
   if (s.phase !== 'playing' || !p.hp) return 'Você está fora do round.'
   if (action.type === 'attack') {
     if (action.super && p.superUses <= 0) return 'Sem super ataques restantes.'
-    if (action.super && p.classId !== 'dps') return 'Este super ainda está em breve.'
+    if (action.super && p.classId === 'suporte') return 'O healer não possui super.'
     if (action.heal && p.classId !== 'suporte') return 'Somente o healer pode curar.'
     if (action.super) p.superUses--
     p.shotSeq++
